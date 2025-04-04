@@ -1,89 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: 0.1rem;
-  width: 2480px;
-  height: 300px;
-  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.05rem;
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+  padding: 30px;
 }
 
-hr {
-  width: 170px;
-  margin-left: 0;
-  margin-bottom: 1.5rem;
-}
-
-h2 {
-  margin-top: 2rem;
-}
-
-h3 {
-  margin-top: 1.5rem;
+h3.title-section {
+  margin-top: 40px;
   color: #4B0082;
-}
-
-header {
-  padding: 1rem;
-  padding-left: 2rem;
-  background-color: #a16cb43d;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  flex-direction: column;
-  justify-content: center;
-  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.5);
-}
-
-h1 {
-  font-size: 42px;
-  margin: 0 !important;
-}
-
-.sidebar {
-  background-color: #a16cb43d;
-  padding: 1rem;
-  box-shadow: 5px 5px 5px 0px rgba(75, 73, 73, 0.33);
 }
 
 .cv-container {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  width: 1200px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  grid-template-columns: 1fr 2fr;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-.date {
-  margin: 1rem;
-  color: #8a599ccd;
+.sidebar {
+  background-color: #1f2430;
+  color: #fff;
+  padding: 2rem;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
-h1 {
-  margin: 1rem;
+.sidebar h3 {
+  font-size: 1.2rem;
+  color: #a1a1a1;
+  margin-bottom: 1rem;
 }
 
-.cv-img {
-  width: 120px;
-  height: 150px;
+.sidebar hr {
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 2px solid #444;
+}
+
+.sidebar p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .svg {
+  width: 22px;
+  height: 22px;
+  margin-right: 1rem;
+}
+
+.content {
+  padding: 2rem;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+header .infos {
+  font-size: 1.2rem;
+}
+
+header .infos h1 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+header .infos p {
+  color: #777;
+}
+
+.sidebar .cv-img {
+  width: 150px;
+  margin-left: 80px;
   border-radius: 50%;
-  box-shadow: 5px 5px 5px 0px rgba(75, 73, 73, 0.33);
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.projects {
+  font-size: 1rem;
+}
 
-ul li {
-  list-style-type: none;
+.projects h3 {
+  color: #1f2430;
+}
+
+.projects p {
+  margin-bottom: 0.8rem;
+  color: #555;
+}
+
+.projects p a {
+  color: #1f2430;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.projects p a:hover {
+  text-decoration: underline;
 }
 
 main {
-  margin: 2rem;
+  margin-top: 30px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #1f2430;
+  font-weight: bold;
+}
+
+section hr {
+  width: 60px;
+  height: 2px;
+  background-color: #1f2430;
+  margin-bottom: 1rem;
+}
+
+section ul {
+  list-style: none;
+}
+
+section ul li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+section ul li:before {
+  content: '•';
+  margin-left: 10px;
+  color: #1f2430;
+  position: absolute;
+  left: -1.5rem;
+  top: 0;
+}
+
+.date {
+  font-size: 1rem;
+  color: #888;
+  margin-top: 5px;
+}
+
+.objective {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #555;
+  margin-top: 10px;
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 10px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 0.9rem;
+  color: #888;
 }
 
-.svg {
-  width: 20px;
-  height: 20px;
-  margin-right: 1rem;
+footer a {
+  color: #1f2430;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.sidebar p:hover {
+  color: #fff;
+  background-color: #3e444e;
+  padding-left: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.sidebar h3 {
+  color: #dcdcdc;
 }
